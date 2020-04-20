@@ -1,4 +1,19 @@
 #main-doc {
-  margin-right: 25%;
-  padding: 2%;
+  margin-left: 25%;
+  padding: 5%;
+
+  .main-section {
+    margin: 0 0 100px;
+    &__header {
+      font-size: 3rem;
+      font-weight: 500;
+      color: #282c34;
+      margin-bottom: 24px;
+    }
+    p {
+      font-size: 1.1rem;
+      line-height: 2rem;
+      margin: 2.4rem 0;
+    }
+  }
 }

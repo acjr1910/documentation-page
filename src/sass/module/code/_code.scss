@@ -1,0 +1,50 @@
+.main-section {
+  &__code-container {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background: rgb(40, 44, 52) none repeat scroll 0% 0%;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    overflow: auto;
+    line-height: 25px;
+
+    &:first-line {
+      line-height: 0px;
+    }
+
+    pre {
+      height: auto !important;
+      margin: 1rem;
+      font-size: 14px;
+      display: flex;
+      line-height: 20px;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    pre::first-line {
+      line-height: 0px;
+    }
+
+    code {
+      line-height: 20px;
+      white-space: pre-line;
+      word-break: break-word;
+    }
+
+    code:first-line {
+      line-height: 0px;
+    }
+
+    .jsx-code {
+      &__const {
+        color: rgb(197, 165, 197);
+      }
+      &__tag {
+        color: rgb(252, 146, 158);
+      }
+    }
+  }
+}

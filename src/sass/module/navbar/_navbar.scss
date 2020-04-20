@@ -3,7 +3,7 @@
   overflow: scroll;
   display: flex;
   flex-wrap: wrap;
-  right: 0;
+  left: 0;
   width: 100%;
   max-width: 25%;
   height: 100%;
@@ -11,7 +11,7 @@
   .navbar {
     &__container {
       background-color: #f7f7f7;
-      border-left: 1px solid gray;
+      border-right: 1px solid rgb(236, 236, 236);
       width: 100%;
       padding: 10px;
     }
@@ -22,7 +22,7 @@
       margin: 1rem 0;
       width: 100%;
       margin: 0;
-      padding: 1.2rem 0.6rem;
+      padding: 0.8rem 0.6rem;
       text-decoration: none;
       color: #1a1a1a;
       &:hover {
@@ -32,7 +32,9 @@
 
     &__header {
       font-weight: 500;
-      font-size: 1.4rem;
+      font-size: 1.2rem;
+      margin-top: 2.4rem;
+      text-transform: uppercase;
     }
   }
 }
