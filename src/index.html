@@ -12,28 +12,35 @@
         <header class="navbar__header">
           JSX Main Concepts
         </header>
-        <a class="nav-link navbar__link" href="#introducing_jsx">Introducing JSX</a>
-        <a class="nav-link navbar__link" href="#why_jsx">Why JSX?</a>
-        <a class="nav-link navbar__link" href="#embedding_expressions_in_jsx"
+        <a class="nav-link navbar__link" href="#Introducing_JSX"
+          >Introducing JSX</a
+        >
+        <a class="nav-link navbar__link" href="#Why_JSX?">Why JSX?</a>
+        <a class="nav-link navbar__link" href="#Embedding_Expressions_in_JSX"
           >Embedding Expressions in JSX</a
         >
-        <a class="nav-link navbar__link" href="#jsx_is_an_expression_too">JSX is an Expression Too</a>
-        <a class="nav-link navbar__link" href="#specifying_attributes_with_jsx"
+        <a class="nav-link navbar__link" href="#JSX_is_an_Expression_Too"
+          >JSX is an Expression Too</a
+        >
+        <a class="nav-link navbar__link" href="#Specifying_Attributes_with_JSX"
           >Specifying Attributes with JSX</a
         >
-        <a class="nav-link navbar__link" href="#specifying_children_with_jsx"
+        <a class="nav-link navbar__link" href="#Specifying_Children_with_JSX"
           >Specifying Children with JSX</a
         >
-        <a class="nav-link navbar__link" href="#jsx_prevents_injection_attacks"
+        <a class="nav-link navbar__link" href="#JSX_Prevents_Injection_Attacks"
           >JSX Prevents Injection Attacks</a
         >
-        <a class="nav-link navbar__link" href="#jsx_represents_objects">JSX Represents Objects</a>
-
+        <a class="nav-link navbar__link" href="#JSX_Represents_Objects"
+          >JSX Represents Objects</a
+        >
       </div>
     </nav>
     <main id="main-doc">
-      <section class="main-section">
-        <header id="introducing_jsx" class="main-section__header">Introducing JSX</header>
+      <section id="Introducing_JSX" class="main-section">
+        <header class="main-section__header">
+          Introducing JSX
+        </header>
         <p>Consider this variable declaration:</p>
         <div class="main-section__code-container">
           <pre>
@@ -54,8 +61,8 @@
           necessary to get you started.
         </p>
       </section>
-      <section class="main-section">
-        <header id="why_jsx" class="main-section__header">Why JSX?</header>
+      <section id="Why_JSX?" class="main-section">
+        <header class="main-section__header">Why JSX?</header>
         <p>
           React embraces the fact that rendering logic is inherently coupled
           with other UI logic: how events are handled, how the state changes
@@ -77,8 +84,10 @@
           With that out of the way, let’s get started!
         </p>
       </section>
-      <section class="main-section">
-        <header id="embedding_expressions_in_jsx" class="main-section__header">Embedding Expressions in JSX</header>
+      <section id="Embedding_Expressions_in_JSX" class="main-section">
+        <header class="main-section__header">
+          Embedding Expressions in JSX
+        </header>
         <p>
           In the example below, we declare a variable called name and then use
           it inside JSX by wrapping it in curly braces:
@@ -87,38 +96,41 @@
           <pre>
             <code class="jsx-code">
               <span class="jsx-code__const">const</span> name = 'Josh Perez';
-              <span class="jsx-code__const">const</span> element = &lt;h1&gt;Hello, {name}&lt;/h1&gt;;
-              ReactDOM.render( element, document.getElementById('root'));
+              <span class="jsx-code__const">const</span> element = &lt;<span class="jsx-code__tag">h1</span>&gt;Hello, {name}&lt;<span class="jsx-code__tag">/h1</span>&gt;;
+              ReactDOM.<span class="jsx-code__method">render</span>(element, document.<span class="jsx-code__method">getElementById</span>(<span class="jsx-code__string">'root'</span>));
             </code>
           </pre>
         </div>
         <p>
-          You can put any valid JavaScript expression inside the curly braces in JSX. For example, 2 + 2, user.firstName, or formatName(user) are all valid JavaScript expressions.
+          You can put any valid JavaScript expression inside the curly braces in
+          JSX. For example, 2 + 2, user.firstName, or formatName(user) are all
+          valid JavaScript expressions.
         </p>
         <p>
-          In the example below, we embed the result of calling a JavaScript function, formatName(user), into an <h1> element.
+          In the example below, we embed the result of calling a JavaScript
+          function, formatName(user), into an element.
         </p>
         <div class="main-section__code-container">
           <pre>
             <code class="jsx-code">
-              function formatName(user) {
-                &ensp;&ensp;return user.firstName + ' ' + user.lastName;
+              <span class="jsx-code__const">function</span> <span class="jsx-code__method">formatName</span>(user) {
+                &ensp;&ensp;<span class="jsx-code__const">return</span> user.firstName + ' ' + user.lastName;
               }
 
-              const user = {
+              <span class="jsx-code__const">const</span> user = {
                 &ensp;&ensp;firstName: 'Harper',
                 &ensp;&ensp;lastName: 'Perez'
               };
               
-              const element = (
-                &ensp;&ensp;&lt;h1&gt;
+              <span class="jsx-code__const">const</span> element = (
+                &ensp;&ensp;&lt;<span class="jsx-code__tag">h1</span>&gt;
                 &ensp;&ensp;&ensp;&ensp;Hello, {formatName(user)}!
-                &ensp;&ensp;&lt;/h1&gt;
+                &ensp;&ensp;&lt;<span class="jsx-code__tag">/h1</span>&gt;
               );
               
-              ReactDOM.render(
+              ReactDOM.<span class="jsx-code__method">render</span>(
                 element,
-                document.getElementById('root')
+                document.<span class="jsx-code__method">getElementById</span>(<span class="jsx-code__string">'root'</span>)
               );
             </code>
           </pre>
@@ -126,72 +138,87 @@
         <div class="main-section__code-container">
           <pre>
             <code class="jsx-code">
-              function formatName(user) {
-                &ensp;&ensp;return user.firstName + ' ' + user.lastName;
+              <span class="jsx-code__const">function</span> <span class="jsx-code__method">formatName</span>(user) {
+                &ensp;&ensp;<span class="jsx-code__const">return</span> user.firstName + ' ' + user.lastName;
               }
             </code>
           </pre>
         </div>
         <p>
-          We split JSX over multiple lines for readability. While it isn’t required, when doing this, we also recommend wrapping it in parentheses to avoid the pitfalls of automatic semicolon insertion.
+          We split JSX over multiple lines for readability. While it isn’t
+          required, when doing this, we also recommend wrapping it in
+          parentheses to avoid the pitfalls of automatic semicolon insertion.
         </p>
       </section>
-      <section class="main-section">
-        <header id="jsx_is_an_expression_too" class="main-section__header">JSX is an Expression Too</header>
+      <section id="JSX_is_an_Expression_Too" class="main-section">
+        <header class="main-section__header">
+          JSX is an Expression Too
+        </header>
         <p>
-          After compilation, JSX expressions become regular JavaScript function calls and evaluate to JavaScript objects.
+          After compilation, JSX expressions become regular JavaScript function
+          calls and evaluate to JavaScript objects.
         </p>
         <p>
-          This means that you can use JSX inside of if statements and for loops, assign it to variables, accept it as arguments, and return it from functions:
+          This means that you can use JSX inside of if statements and for loops,
+          assign it to variables, accept it as arguments, and return it from
+          functions:
         </p>
         <div class="main-section__code-container">
           <pre>
             <code class="jsx-code">
-              function getGreeting(user) {
+              <span class="jsx-code__const">function</span> <span class="jsx-code__method">getGreeting</span>(user) {
                 &ensp;if (user) {
-                  &ensp;&ensp;return &lt;h1&gt;Hello, {formatName(user)}!&lt;/h1&gt;;
+                  &ensp;&ensp;<span class="jsx-code__const">return</span> &lt;<span class="jsx-code__tag">h1</span>&gt;Hello, {formatName(user)}!&lt;/<span class="jsx-code__tag">h1</span>&gt;;
                 &ensp;}
-                  &ensp;return &lt;h1&gt;Hello, Stranger.&lt;/h1&gt;;
+                  &ensp;<span class="jsx-code__const">return</span> &lt;<span class="jsx-code__tag">h1</span>&gt;Hello, Stranger.&lt;/<span class="jsx-code__tag">h1</span>&gt;;
               }
             </code>
           </pre>
         </div>
       </section>
-      <section class="main-section">
-        <header id="specifying_attributes_with_jsx" class="main-section__header">Specifying Attributes with JSX</header>
+      <section id="Specifying_Attributes_with_JSX" class="main-section">
+        <header class="main-section__header">
+          Specifying Attributes with JSX
+        </header>
         <p>
           You may use quotes to specify string literals as attributes:
         </p>
         <div class="main-section__code-container">
           <pre>
             <code class="jsx-code">
-              const element = &lt;div tabIndex="0"&gt;&lt;/div&gt;;
+              <span class="jsx-code__const">const</span> element = &lt;<span class="jsx-code__tag">div</span> tabIndex="0"&gt;&lt;/<span class="jsx-code__tag">div</span>&gt;;
             </code>
           </pre>
         </div>
         <p>
-          You may also use curly braces to embed a JavaScript expression in an attribute:
+          You may also use curly braces to embed a JavaScript expression in an
+          attribute:
         </p>
         <div class="main-section__code-container">
           <pre>
             <code class="jsx-code">
-              const element = const element = &lt;img src={user.avatarUrl}&gt;&lt;/img&gt;;
+              <span class="jsx-code__const">const</span> element = &lt;<span class="jsx-code__tag">img</span> src={user.avatarUrl}&gt;&lt;/<span class="jsx-code__tag">img</span>&gt;;
             </code>
           </pre>
         </div>
         <p>
-          Don’t put quotes around curly braces when embedding a JavaScript expression in an attribute. You should either use quotes (for string values) or curly braces (for expressions), but not both in the same attribute.
+          Don’t put quotes around curly braces when embedding a JavaScript
+          expression in an attribute. You should either use quotes (for string
+          values) or curly braces (for expressions), but not both in the same
+          attribute.
         </p>
       </section>
-      <section class="main-section">
-        <header id="specifying_children_with_jsx" class="main-section__header">Specifying Children with JSX</header>
+      <section id="Specifying_Children_with_JSX" class="main-section">
+        <header class="main-section__header">
+          Specifying Children with JSX
+        </header>
         <p>
           If a tag is empty, you may close it immediately with />, like XML:
         </p>
         <div class="main-section__code-container">
           <pre>
             <code class="jsx-code">
-              const element = &lt;img src={user.avatarUrl} /&gt;;
+              <span class="jsx-code__const">const</span> element = &lt;<span class="jsx-code__tag">img</span> src={user.avatarUrl} /&gt;;
             </code>
           </pre>
         </div>
@@ -201,76 +228,106 @@
         <div class="main-section__code-container">
           <pre>
             <code class="jsx-code">
-              const element = (
-                &ensp;&ensp;&lt;div&gt;
-                &ensp;&ensp;&ensp;&ensp;&lt;h1&gt;Hello!&lt;/h1&gt;
-                &ensp;&ensp;&ensp;&ensp;&lt;h2&gt;Good to see you here.&lt;/h2&gt;
+              <span class="jsx-code__const">const</span> element = (
+                &ensp;&ensp;&lt;<span class="jsx-code__tag">div</span>&gt;
+                &ensp;&ensp;&ensp;&ensp;&lt;<span class="jsx-code__tag">h1</span>&gt;Hello!&lt;/<span class="jsx-code__tag">h1</span>&gt;
+                &ensp;&ensp;&ensp;&ensp;&lt;<span class="jsx-code__tag">h2</span>&gt;Good to see you here.&lt;/<span class="jsx-code__tag">h2</span>&gt;
                   &ensp;&ensp;&lt;/&gt;
               );
             </code>
           </pre>
         </div>
-
       </section>
-      <section class="main-section">
-        <header id="jsx_prevents_injection_attacks">JSX Prevents Injection Attacks</header>
+      <section id="JSX_Prevents_Injection_Attacks" class="main-section">
+        <header class="main-section__header">
+          JSX Prevents Injection Attacks
+        </header>
         <p>
           It is safe to embed user input in JSX:
         </p>
-        <div>
+        <div class="main-section__code-container">
           <pre>
             <code class="jsx-code">
-            const title = response.potentiallyMaliciousInput;
+              <span class="jsx-code__const">const</span> title = response.<span class="jsx-code__method">potentiallyMaliciousInput</span>;
             // This is safe:
-            const element = &lt;h1&gt;{title&lt;/h1&gt;;
-              </pre>
+            <span class="jsx-code__const">const</span> element = &lt;<span class="jsx-code__tag">h1</span>&gt;{title}&lt;/<span class="jsx-code__tag">h1</span>&gt;;
             </code>
+          </pre>
         </div>
         <p>
-          By default, React DOM escapes any values embedded in JSX before rendering them. Thus it ensures that you can never inject anything that’s not explicitly written in your application. Everything is converted to a string before being rendered. This helps prevent XSS (cross-site-scripting) attacks.
+          By default, React DOM escapes any values embedded in JSX before
+          rendering them. Thus it ensures that you can never inject anything
+          that’s not explicitly written in your application. Everything is
+          converted to a string before being rendered. This helps prevent XSS
+          (cross-site-scripting) attacks.
         </p>
       </section>
-      <section class="main-section">
-        <header id="jsx_represents_objects" class="main-section__header">JSX Represents Objects</header>
+      <section id="JSX_Represents_Objects" class="main-section">
+        <header class="main-section__header">
+          JSX Represents Objects
+        </header>
         <p>
           Babel compiles JSX down to React.createElement() calls.
         </p>
         <p>
           These two examples are identical:
         </p>
-        <div>
-          <code>
-            const element = (
-  <h1 className="greeting">
-    Hello, world!
-  </h1>
-);
-          </code>
-          <code>
-            const element = React.createElement(
-  'h1',
-  {className: 'greeting'},
-  'Hello, world!'
-);
-          </code>
+        <div class="main-section__code-container">
+          <pre>
+            <code class="jsx-code">
+              <span class="jsx-code__const">const</span> element = (
+                &lt;<span class="jsx-code__tag">h1</span> className="greeting"&gt;
+                  Hello, world!
+                  &lt;/<span class="jsx-code__tag">h1</span>&gt;
+              );
+            </code>
+          </pre>
+        </div>
+        <div class="main-section__code-container">
+          <pre>
+            <code class="jsx-code">
+              <span class="jsx-code__const">const</span> element = React.<span class="jsx-code__method">createElement</span>(
+                'h1',
+                {className: 'greeting'},
+                'Hello, world!'
+              );
+            </code>
+          </pre>
         </div>
         <p>
-          React.createElement() performs a few checks to help you write bug-free code but essentially it creates an object like this:
+          React.createElement() performs a few checks to help you write bug-free
+          code but essentially it creates an object like this:
         </p>
-        <code>
-          // Note: this structure is simplified
-const element = {
-  type: 'h1',
-  props: {
-    className: 'greeting',
-    children: 'Hello, world!'
-  }
-};
-        </code>
+        <div class="main-section__code-container">
+          <pre>
+            <code class="jsx-code">
+              // Note: this structure is simplified
+              <span class="jsx-code__const">const</span> element = {
+                  type: 'h1',
+                props: {
+                  className: 'greeting',
+                  children: 'Hello, world!'
+                }
+              };
+            </code>
+          </pre>
+        </div>
         <p>
-          These objects are called “React elements”. You can think of them as descriptions of what you want to see on the screen. React reads these objects and uses them to construct the DOM and keep it up to date.
+          These objects are called “React elements”. You can think of them as
+          descriptions of what you want to see on the screen. React reads these
+          objects and uses them to construct the DOM and keep it up to date.
         </p>
-        <p>We will explore rendering React elements to the DOM in the next section.</p>
+        <p>
+          We will explore rendering React elements to the DOM in the next
+          section.
+        </p>
+        <ul class="main-section__list">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
       </section>
     </main>
   </body>
