@@ -1,0 +1,38 @@
+#navbar {
+  position: fixed;
+  overflow: scroll;
+  display: flex;
+  flex-wrap: wrap;
+  right: 0;
+  width: 100%;
+  max-width: 25%;
+  height: 100%;
+
+  .navbar {
+    &__container {
+      background-color: #f7f7f7;
+      border-left: 1px solid gray;
+      width: 100%;
+      padding: 10px;
+    }
+
+    &__link,
+    &__header {
+      display: block;
+      margin: 1rem 0;
+      width: 100%;
+      margin: 0;
+      padding: 1.2rem 0.6rem;
+      text-decoration: none;
+      color: #1a1a1a;
+      &:hover {
+        color: #6d6d6d;
+      }
+    }
+
+    &__header {
+      font-weight: 500;
+      font-size: 1.4rem;
+    }
+  }
+}
